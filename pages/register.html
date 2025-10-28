@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Reservations</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">Home</a>
+    </header>
+
+    <form class="container form" id="reservationForm">
+        <h2>Create Reservation</h2>
+
+        <label>
+            Reservation Name
+            <input type="text" name="guestName" id="guest-name" required />
+        </label>
+
+        <label>
+            Total Guests
+            <input type="number" name="guestCount" min="1" max="6" id="guest-count" required />
+        </label>
+
+        <label>
+            Room Number
+            <input type="text" name="roomNumber" placeholder="101" id="room-number" required />
+        </label>
+
+        <label>
+            Room Type
+            <select name="roomType" id="room-type" required>
+                <option value="Standard">Standard</option>
+                <option value="Suite">Suite</option>
+                <option value="Luxury">Luxury</option>
+            </select>
+        </label>
+
+        <label>
+            Check-in Date
+            <input type="date" name="checkInDate" id="checkInDate" required />
+        </label>
+
+        <label>
+            Check-out Date
+            <input type="date" name="checkOutDate" id="checkOutDate" required />
+        </label>
+
+        <label>
+            Nights
+            <input type="number" name="nightsCount" id="nightsCount" min="1" required />
+        </label>
+
+        <label>
+            Total Price ($)
+            <input type="number" name="totalPrice" id="total-price" min="0" step="0.01" required />
+        </label>
+
+        <button type="submit">Add Reservation</button>
+    </form>
+
+    <script type="module" src="../scripts/addingReservation.js"></script>
+</body>
+
+</html>

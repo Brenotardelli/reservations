@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Reservation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">Home</a>
+    </header>
+
+    <form class="container form" id="editForm">
+        <h2>Edit Reservation</h2>
+
+        <label>
+            Guest Count
+            <input type="number" name="guestCount" id="guest-count" min="1" max="6" required />
+        </label>
+
+        <label>
+            Room Number
+            <input type="text" name="roomNumber" placeholder="101" id="room-number" required />
+        </label>
+
+        <label>
+            Room Type
+            <select name="roomType" id="room-type" required>
+                <option value="Standard">Standard</option>
+                <option value="Suite">Suite</option>
+                <option value="Luxury">Luxury</option>
+            </select>
+        </label>
+
+        <label>
+            Nights Count
+            <input type="number" name="nightsCount" id="nightsCount" min="1" required />
+        </label>
+
+        <label>
+            Check-in Date
+            <input type="date" name="checkInDate" id="checkIn" required />
+        </label>
+
+        <label>
+            Check-out Date
+            <input type="date" name="checkOutDate" id="checkOut" required />
+        </label>
+
+        <label>
+            Total Price ($)
+            <input type="number" name="totalPrice" min="0" step="0.01" id="total-price" required />
+        </label>
+
+        <button type="submit"> save Reservation</button>
+    </form>
+
+
+    <script type="module" src="../scripts/edit.js"></script>
+</body>
+
+</html>
