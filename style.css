@@ -11,9 +11,10 @@ html {
 
 body {
   font-family: sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6em;
   background-color: #f4f6f6;
   color: #00171f;
+  padding: 0 1rem;
 }
 
 ol,
@@ -22,12 +23,15 @@ ul {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 3.2rem 0;
 }
 
 a,
 button {
-  margin: 2rem;
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: #084b83;
@@ -37,6 +41,7 @@ button {
   font-size: 1.8rem;
   transition: all 0.3s;
   cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 button:hover,
@@ -78,6 +83,21 @@ select {
   font-weight: normal;
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.search button {
+  width: 12rem;
+}
+
+.search input {
+  padding: 1.2rem;
+  border: 1px solid #042d4e;
+}
+
 .form {
   height: 100%;
   display: grid;
@@ -114,6 +134,11 @@ select {
   gap: 1.6rem;
 }
 
+.display-elements span {
+  font-weight: bold;
+  color: #021015;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -123,4 +148,41 @@ select {
 
 .btn-delete {
   background-color: #00171f;
+}
+
+@media (max-width: 900px) {
+  .display-elements ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .display {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  a,
+  button {
+    padding: 1rem 1.5rem;
+  }
+
+  @media (max-width: 500px) {
+    a,
+    button {
+      font-size: 1.4rem;
+    }
+
+    header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .search input {
+      padding: 0.9rem;
+    }
+
+    .form {
+      margin-bottom: 1.6rem;
+    }
+  }
 }
