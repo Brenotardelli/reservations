@@ -14,8 +14,6 @@ body {
   font-size: 1.8rem;
   background-color: #f4f6f6;
   color: #00171f;
-  height: 100vh;
-  overflow-y: hidden;
 }
 
 ol,
@@ -85,7 +83,6 @@ select {
   display: grid;
   justify-content: center;
   align-content: center;
-  margin-top: -10rem;
 }
 
 .container {

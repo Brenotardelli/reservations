@@ -29,8 +29,12 @@ window.addEventListener("load", async () => {
   });
 
   searchBtn.addEventListener("click", () => {
-    const searchValue = reservationNameId.value;
+    const searchValue = reservationNameId.value.toLowerCase();
 
-    alert(searchValue);
+    const result = reservations.filter((data) => {
+      return data.guestName.toLowerCase().includes(searchValue);
+    });
+
+    console.log(result);
   });
 });
