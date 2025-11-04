@@ -59,4 +59,12 @@ window.addEventListener("load", async () => {
 `;
     });
   });
+
+  reservationNameId.addEventListener("change", ({ target }) => {
+    const reservationInput = reservationNameId.value;
+
+    if (reservationInput === "") {
+      createElements(displayReservations, reservations);
+    }
+  });
 });
