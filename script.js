@@ -31,11 +31,12 @@ window.addEventListener("load", async () => {
   searchBtn.addEventListener("click", () => {
     const searchValue = reservationNameId.value.toLowerCase();
     displayReservations.innerHTML = "";
+
     const result = reservations.filter((data) => {
       return data.guestName.toLowerCase().includes(searchValue);
     });
 
-    result.forEach((el, i) => {
+    result.forEach((el) => {
       displayReservations.innerHTML += `
     <div class="display">
             <div class="display-elements">
